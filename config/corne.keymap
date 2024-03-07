@@ -141,6 +141,16 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&caps_word>;
         };
+
+        ltr: ltr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LTR";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -148,10 +158,10 @@
 
         base {
             bindings = <
-&kp TAB           &kp Q                &kp W            &kp E                &kp R              &kp T         &kp Y            &kp U               &kp I                 &kp O             &kp P                    &kp BSLH
-&mt LCTRL ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &hml LEFT_SHIFT F  &kp G         &kp H            &hmr RIGHT_SHIFT J  &hmr RIGHT_COMMAND K  &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMI  &kp APOS
-&sft_cap_wrd      &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N            &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp RETURN
-                                                        &kp LGUI             &mo_sl 3 3         &mo_sl 1 1    &lt 3 BACKSPACE  &lt 2 SPACE         &kp RALT
+&kp TAB           &kp Q                &kp W            &kp E                &kp R              &kp T         &kp Y             &kp U               &kp I                 &kp O             &kp P                    &kp BSLH
+&mt LCTRL ESCAPE  &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_COMMAND D  &hml LEFT_SHIFT F  &kp G         &kp H             &hmr RIGHT_SHIFT J  &hmr RIGHT_COMMAND K  &hmr RIGHT_ALT L  &hmr RIGHT_CONTROL SEMI  &kp APOS
+&sft_cap_wrd      &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N             &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp RETURN
+                                                        &lt 4 LC(A)          &mo_sl 3 3         &mo_sl 1 1    &ltr 3 BACKSPACE  &ltr 2 SPACE        &kp RALT
             >;
         };
 
