@@ -82,14 +82,14 @@
         tmux_pane_left: tmux_pane_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tmux_leader &kp H>;
+            bindings = <&tmux_leader &kp LC(H)>;
             label = "TMUX_PANE_LEFT";
         };
 
         tmux_pane_right: tmux_pane_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tmux_leader &kp L>;
+            bindings = <&tmux_leader &kp LC(L)>;
             label = "TMUX_PANE_RIGHT";
         };
 
