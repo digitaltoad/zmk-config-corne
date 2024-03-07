@@ -173,10 +173,6 @@
 &sft_cap_wrd      &kp Z                &kp X            &kp C                &kp V              &kp B         &kp N            &kp M               &kp COMMA             &kp DOT           &kp FSLH                 &kp RETURN
                                                         &kp LGUI             &mo_sl 3 3         &mo_sl 1 1    &lt 3 BACKSPACE  &lt 2 SPACE         &kp RALT
             >;
-
-            sensor-bindings =
-                <&rgbknob RGB_HUI RGB_HUD>,
-                <&rgbknob RGB_BRI RGB_BRD>;
         };
 
         numpad {
@@ -186,8 +182,6 @@
 &trans  &trans            &kp F1            &kp F2                &kp F3              &kp F12    &trans  &kp NUMBER_1               &kp NUMBER_2                 &kp NUMBER_3             &kp SLASH                &trans
                                             &trans                &trans              &trans     &trans  &kp N0                     &kp KP_DOT
             >;
-
-            sensor-bindings = <&volknob>;
         };
 
         navigate {
