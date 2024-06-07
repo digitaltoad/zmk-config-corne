@@ -8,9 +8,8 @@
 &sl { release-after-ms = <200>; };
 
 &caps_word {
-  /delete-property/ ignore-modifiers;
-  continue-list = <UNDERSCORE BACKSPACE DELETE LSHFT RSHFT>;
-}
+  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
 
 / {
     combos {
