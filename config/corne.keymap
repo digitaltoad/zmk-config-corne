@@ -7,9 +7,7 @@
 
 &sl { release-after-ms = <200>; };
 
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-};
+&caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 
 / {
     combos {
@@ -28,6 +26,11 @@
         warpd {
             bindings = <&kp LS(LA(LG(X)))>;
             key-positions = <37 40>;
+        };
+
+        wispr {
+            bindings = <&wispr_record>;
+            key-positions = <36 41>;
         };
     };
 
@@ -114,6 +117,20 @@
             #binding-cells = <0>;
             bindings = <&tmux_leader &kp LEFT_BRACKET>;
             label = "TMUX_SCROLL";
+        };
+
+        wispr_record: wispr_record {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(V))>;
+            label = "WISPR_RECORD";
+        };
+
+        wispr_record_toggle: wispr_record_toggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&wispr_record &wispr_record>;
+            label = "WISPR_RECORD_TOGGLE";
         };
     };
 
